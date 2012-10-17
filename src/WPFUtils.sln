@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFUtils", "WPFUtils\WPFUtils.csproj", "{6B9D2AE7-0F7E-4883-B63C-11004853C327}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{9692FB98-5D70-400F-BF6E-7AEFBEAC03B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFUtils.Samples.DynamicGridFormationBehavior", "Samples\WPFUtils.Samples.DynamicGridFormationBehavior\WPFUtils.Samples.DynamicGridFormationBehavior.csproj", "{7308BA99-13C7-45F8-AC7F-03248585F66A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6B9D2AE7-0F7E-4883-B63C-11004853C327}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B9D2AE7-0F7E-4883-B63C-11004853C327}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B9D2AE7-0F7E-4883-B63C-11004853C327}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B9D2AE7-0F7E-4883-B63C-11004853C327}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7308BA99-13C7-45F8-AC7F-03248585F66A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7308BA99-13C7-45F8-AC7F-03248585F66A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7308BA99-13C7-45F8-AC7F-03248585F66A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7308BA99-13C7-45F8-AC7F-03248585F66A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7308BA99-13C7-45F8-AC7F-03248585F66A} = {9692FB98-5D70-400F-BF6E-7AEFBEAC03B6}
+	EndGlobalSection
+EndGlobal

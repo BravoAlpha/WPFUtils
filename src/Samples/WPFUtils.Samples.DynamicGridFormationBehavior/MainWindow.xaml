@@ -1,0 +1,102 @@
+﻿<Window x:Class="WPFUtils.Samples.DynamicGridFormationBehavior.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:behaviors="clr-namespace:WPFUtils.Behaviors;assembly=WPFUtils"
+        xmlns:converters="clr-namespace:WPFUtils.Converters;assembly=WPFUtils" 
+        Title="Dynamic Grid Behavior Sample" 
+        DataContext="{Binding Source={StaticResource viewModelLocator}, Path=MainWindowViewModel}"
+        Height="350"
+        Width="525">
+    
+    <Window.Resources>
+        <converters:StringToIntConverter x:Key="stringToIntConverter"/>
+    </Window.Resources>
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20px" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Horizontal">
+            <ToggleButton Width="25" Margin="5,0" Content="1" 
+                          Command="{Binding ChangeNumberOfVisibleItemsCommand}" 
+                          CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content, Converter={StaticResource stringToIntConverter}}"/>
+            <ToggleButton Width="25" Margin="5,0" Content="2" 
+                          Command="{Binding ChangeNumberOfVisibleItemsCommand}" 
+                          CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content, Converter={StaticResource stringToIntConverter}}"/>
+            <ToggleButton Width="25" Margin="5,0" Content="3" 
+                          Command="{Binding ChangeNumberOfVisibleItemsCommand}" 
+                          CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content, Converter={StaticResource stringToIntConverter}}"/>
+            <ToggleButton Width="25" Margin="5,0" Content="4" 
+                          Command="{Binding ChangeNumberOfVisibleItemsCommand}" 
+                          CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content, Converter={StaticResource stringToIntConverter}}"/>
+        </StackPanel>
+
+        <ItemsControl Grid.Column="0" Grid.Row="1" ItemsSource="{Binding Items}">
+
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Border Background="Black" BorderBrush="White" BorderThickness="2">
+                        <Label Foreground="White" FontSize="40" Content="{Binding Name}" HorizontalAlignment="Center"
+                               VerticalAlignment="Center" />
+                    </Border>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <Grid>
+                        <i:Interaction.Behaviors>
+                            <behaviors:DynamicGridFormationBehavior NumberOfVisibleChildren="{Binding NumberOfVisibleItems}">
+                                <behaviors:DynamicGridFormationBehavior.Formations>
+                                    <behaviors:DynamicGridFormationCollection>
+                                        <behaviors:DynamicGridFormation NumberOfChildren="1" NumberOfRows="1" NumberOfColumns="1">
+                                            <behaviors:DynamicGridFormation.ChildProperties>
+                                                <behaviors:DynamicGridChildPropertiesCollection>
+                                                    <behaviors:DynamicGridChildProperties Index="0" Row="0" Column="0" />
+                                                </behaviors:DynamicGridChildPropertiesCollection>
+                                            </behaviors:DynamicGridFormation.ChildProperties>
+                                        </behaviors:DynamicGridFormation>
+                                        <behaviors:DynamicGridFormation NumberOfChildren="2" NumberOfRows="1" NumberOfColumns="2">
+                                            <behaviors:DynamicGridFormation.ChildProperties>
+                                                <behaviors:DynamicGridChildPropertiesCollection>
+                                                    <behaviors:DynamicGridChildProperties Index="0" Row="0" Column="0" />
+                                                    <behaviors:DynamicGridChildProperties Index="1" Row="0" Column="1" />
+                                                </behaviors:DynamicGridChildPropertiesCollection>
+                                            </behaviors:DynamicGridFormation.ChildProperties>
+                                        </behaviors:DynamicGridFormation>
+                                        <behaviors:DynamicGridFormation NumberOfChildren="3" NumberOfRows="2" NumberOfColumns="2">
+                                            <behaviors:DynamicGridFormation.ChildProperties>
+                                                <behaviors:DynamicGridChildPropertiesCollection>
+                                                    <behaviors:DynamicGridChildProperties Index="0" Row="0" Column="0" />
+                                                    <behaviors:DynamicGridChildProperties Index="1" Row="1" Column="0" />
+                                                    <behaviors:DynamicGridChildProperties Index="2" Row="0" Column="1" RowSpan="2" />
+                                                </behaviors:DynamicGridChildPropertiesCollection>
+                                            </behaviors:DynamicGridFormation.ChildProperties>
+                                        </behaviors:DynamicGridFormation>
+                                        <behaviors:DynamicGridFormation NumberOfChildren="4" NumberOfRows="2" NumberOfColumns="2">
+                                            <behaviors:DynamicGridFormation.ChildProperties>
+                                                <behaviors:DynamicGridChildPropertiesCollection>
+                                                    <behaviors:DynamicGridChildProperties Index="0" Row="0" Column="0" />
+                                                    <behaviors:DynamicGridChildProperties Index="1" Row="0" Column="1" />
+                                                    <behaviors:DynamicGridChildProperties Index="2" Row="1" Column="0" />
+                                                    <behaviors:DynamicGridChildProperties Index="3" Row="1" Column="1" />
+                                                </behaviors:DynamicGridChildPropertiesCollection>
+                                            </behaviors:DynamicGridFormation.ChildProperties>
+                                        </behaviors:DynamicGridFormation>
+                                    </behaviors:DynamicGridFormationCollection>
+
+                                </behaviors:DynamicGridFormationBehavior.Formations>
+                            </behaviors:DynamicGridFormationBehavior>
+                        </i:Interaction.Behaviors>
+                    </Grid>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+
+        </ItemsControl>
+
+    </Grid>
+</Window>
