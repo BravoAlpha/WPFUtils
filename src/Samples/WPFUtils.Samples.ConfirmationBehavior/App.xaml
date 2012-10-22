@@ -1,0 +1,11 @@
+﻿<Application x:Class="WPFUtils.Samples.ConfirmationBehavior.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:ConfirmationBehavior="clr-namespace:WPFUtils.Samples.ConfirmationBehavior"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ConfirmationBehavior:ViewModelLocator x:Key="viewModelLocator"/>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

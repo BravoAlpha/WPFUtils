@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{9692
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFUtils.Samples.DynamicGridFormationBehavior", "Samples\WPFUtils.Samples.DynamicGridFormationBehavior\WPFUtils.Samples.DynamicGridFormationBehavior.csproj", "{7308BA99-13C7-45F8-AC7F-03248585F66A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFUtils.Samples.ConfirmationBehavior", "Samples\WPFUtils.Samples.ConfirmationBehavior\WPFUtils.Samples.ConfirmationBehavior.csproj", "{6A661B16-19F3-4E6D-A3AD-5ECF774761CD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,11 +23,16 @@ Global
 		{7308BA99-13C7-45F8-AC7F-03248585F66A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7308BA99-13C7-45F8-AC7F-03248585F66A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7308BA99-13C7-45F8-AC7F-03248585F66A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A661B16-19F3-4E6D-A3AD-5ECF774761CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A661B16-19F3-4E6D-A3AD-5ECF774761CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A661B16-19F3-4E6D-A3AD-5ECF774761CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A661B16-19F3-4E6D-A3AD-5ECF774761CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{7308BA99-13C7-45F8-AC7F-03248585F66A} = {9692FB98-5D70-400F-BF6E-7AEFBEAC03B6}
+		{6A661B16-19F3-4E6D-A3AD-5ECF774761CD} = {9692FB98-5D70-400F-BF6E-7AEFBEAC03B6}
 	EndGlobalSection
 EndGlobal
