@@ -60,17 +60,19 @@ namespace WPFUtils.Behaviors
             if (Command == null || !Command.CanExecute(CommandParameter))
                 return;
 
-            if(!ShouldConfirm())
+            if (ShouldConfirm())
+            {
+                MessageBoxResult result = MessageBox.Show(Message, Caption, MessageBoxButton.YesNo,
+                                                          MessageBoxImage.Question);
+                if (result == MessageBoxResult.Yes)
+                    OnConfirmed();
+                else
+                    OnNotConfirmed();
+            }
+            else
             {
                 OnConfirmed();
-                return;
             }
-
-            MessageBoxResult result = MessageBox.Show(Message, Caption, MessageBoxButton.YesNo, MessageBoxImage.Question);
-            if (result == MessageBoxResult.Yes)
-                OnConfirmed();
-            else
-                OnNotConfirmed();
         }
 
         protected virtual bool ShouldConfirm()

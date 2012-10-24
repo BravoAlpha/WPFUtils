@@ -5,7 +5,7 @@
         xmlns:behaviors="clr-namespace:WPFUtils.Behaviors;assembly=WPFUtils" 
         Title="Confirmation Behavior Sample" 
         DataContext="{Binding Source={StaticResource viewModelLocator}, Path=MainWindowViewModel}"
-        Height="150" Width="350">
+        Height="250" Width="350">
     <Grid>
         
         <Grid.Resources>
@@ -115,22 +115,22 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
         
-        <Button Grid.Row="0" Grid.Column="0" Content="Button">
+        <Button Grid.Row="0" Grid.Column="0" Content="Delete">
             <i:Interaction.Behaviors>
                 <behaviors:ConfirmationBehavior
                     Message="Are You Sure?"
                     Caption="Please Confirm..."
-                    Command="{Binding FirstCommand}">
+                    Command="{Binding DeleteCommand}">
                 </behaviors:ConfirmationBehavior>
             </i:Interaction.Behaviors>
         </Button>
         
-        <ToggleButton Grid.Row="0" Grid.Column="1" Content="ToggleButton">
+        <ToggleButton Grid.Row="0" Grid.Column="1" Content="Activate">
             <i:Interaction.Behaviors>
                 <behaviors:ToggleConfirmationBehavior
                     Message="{Binding ConfirmationMessage}"
                     Caption="{Binding ConfirmationCaption}"
-                    Command="{Binding SecondCommand}">
+                    Command="{Binding ActivateCommand}">
                 </behaviors:ToggleConfirmationBehavior>
             </i:Interaction.Behaviors>
         </ToggleButton>

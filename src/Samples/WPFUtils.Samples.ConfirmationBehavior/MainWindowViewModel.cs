@@ -9,12 +9,12 @@ namespace WPFUtils.Samples.ConfirmationBehavior
 
         public string ConfirmationMessage
         {
-            get { return "Message Here..."; }
+            get { return "Are you sure..."; }
         }
 
         public string ConfirmationCaption
         {
-            get { return "Caption Here..."; }
+            get { return "Please Confirm..."; }
         }
 
         public string Info
@@ -31,13 +31,13 @@ namespace WPFUtils.Samples.ConfirmationBehavior
             }
         }
 
-        public DelegateCommand FirstCommand { get; private set; }
-        public DelegateCommand SecondCommand { get; private set; }
+        public DelegateCommand DeleteCommand { get; private set; }
+        public DelegateCommand ActivateCommand { get; private set; }
 
         public MainWindowViewModel()
         {
-            FirstCommand = new DelegateCommand(() => Info = "First Command Executed!");
-            SecondCommand = new DelegateCommand(() => Info = "Second Command Executed!");
+            DeleteCommand = new DelegateCommand(() => Info = "Delete Command Executed!");
+            ActivateCommand = new DelegateCommand(() => Info = "Activate Command Executed!");
         }
     }
 }
