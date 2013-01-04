@@ -1,0 +1,15 @@
+﻿<Window x:Class="WPFUtils.Samples.AlwaysOnTopBehavior.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:behaviors="clr-namespace:WPFUtils.Behaviors;assembly=WPFUtils" 
+        Topmost="True"
+        Title="AlwaysOnTopBehavior Sample" Height="350" Width="525">
+    
+    <i:Interaction.Behaviors>
+        <behaviors:AlwaysOnTopBehavior/>
+    </i:Interaction.Behaviors>
+    <Grid>
+        
+    </Grid>
+</Window>
