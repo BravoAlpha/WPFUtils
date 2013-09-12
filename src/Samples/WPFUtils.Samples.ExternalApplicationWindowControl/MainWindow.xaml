@@ -1,0 +1,19 @@
+﻿<Window x:Class="WPFUtils.Samples.ExternalApplicationWindowControl.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="clr-namespace:WPFUtils.Controls;assembly=WPFUtils.Controls" 
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Controls:ExternalApplicationWindowControl WindowName="Calculator">
+            <Controls:ExternalApplicationWindowControl.PlaceHolderContent>
+                <Border Background="Gray">
+                    <TextBlock Text="Waiting for Window" 
+                               FontFamily="Calibri"
+                               FontSize="45"
+                               HorizontalAlignment="Center" 
+                               VerticalAlignment="Center"/>
+                </Border>
+            </Controls:ExternalApplicationWindowControl.PlaceHolderContent>
+        </Controls:ExternalApplicationWindowControl>
+    </Grid>
+</Window>
