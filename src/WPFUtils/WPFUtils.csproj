@@ -81,6 +81,10 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="ScreenManager.cs" />
+    <Compile Include="Translation\ITranslationProvider.cs" />
+    <Compile Include="Translation\ResxTranslationProvider.cs" />
+    <Compile Include="Translation\TranslateExtension.cs" />
+    <Compile Include="Translation\TranslationService.cs" />
     <Compile Include="WeakEventListener.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
